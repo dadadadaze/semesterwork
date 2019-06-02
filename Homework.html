@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Homework</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../Homework/Homework.css">
+<style type="text/css">	</style>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".bodys p").not(":first").hide();
+	$(".searchbox ul li").mouseover(function(){
+		var index = $(this).index();
+		if(index==0){
+			$(this).find("a").addClass("style1");
+			$("li").eq(1).find("a").removeClass("style2");
+			$("li").eq(2).find("a").removeClass("style3");
+		}
+		if(index==1){
+			$(this).find("a").addClass("style2");
+			$("li").eq(0).find("a").removeClass("style1");
+			$("li").eq(2).find("a").removeClass("style3");
+		}
+		if(index==2){
+			$(this).find("a").addClass("style3");
+			$("li").eq(0).find("a").removeClass("style1");
+			$("li").eq(1).find("a").removeClass("style2");
+		}
+
+		var index=$(this).index();
+		$(".bodys p").eq(index).show().siblings().hide();
+	});
+});
+</script>
+<script type="text/javascript">
+	function display(){
+        document.getElementById("box").style.display="block"; 
+    }
+    function disappear(){
+        document.getElementById("box").style.display="none"; 
+    }
+</script>
+<script type="text/javascript">
+	function display1(){
+        document.getElementById("box1").style.display="block"; 
+    }
+    function disappear1(){
+        document.getElementById("box1").style.display="none"; 
+    }
+</script>
+<script type="text/javascript">
+    function display2(){
+        document.getElementById("bbsbox1").style.display="block"; 
+    }
+    function disappear2(){
+        document.getElementById("bbsbox1").style.display="none"; 
+    }
+      function display3(){
+        document.getElementById("bbsbox2").style.display="block"; 
+    }
+    function disappear3(){
+        document.getElementById("bbsbox2").style.display="none"; 
+    }
+       function display4(){
+        document.getElementById("bbsbox3").style.display="block"; 
+    }
+    function disappear4(){
+        document.getElementById("bbsbox3").style.display="none"; 
+    }
+       function display5(){
+        document.getElementById("bbsbox4").style.display="block"; 
+    }
+    function disappear5(){
+        document.getElementById("bbsbox4").style.display="none"; 
+    }
+        function display6(){
+        document.getElementById("bbsbox5").style.display="block"; 
+    }
+    function disappear6(){
+        document.getElementById("bbsbox5").style.display="none"; 
+    }
+        function display7(){
+        document.getElementById("bbsbox6").style.display="block"; 
+    }
+    function disappear7(){
+        document.getElementById("bbsbox6").style.display="none"; 
+    }
+    function display8(){
+        document.getElementById("bbsbox7").style.display="block"; 
+    }
+    function disappear8(){
+        document.getElementById("bbsbox7").style.display="none"; 
+    }
+</script>
+	<style type="text/css">
+		*{
+			margin:0 auto;
+			 padding: 0;
+			 list-style: none;
+		}
+		#wrap{
+			width: 225px;
+			height: 135px;
+			margin-top: 30px;
+			margin-left: 20px;
+			border: 1px solid red;
+		}
+		.img{
+			position: relative;
+		}
+		.item{
+			position: absolute;
+			opacity: 0;
+			transition: all 2s;
+		}
+		.item.active{
+			z-index: 10;
+			opacity: 1;
+		}
+
+		.btn{
+			margin-left: 250px;
+			width: 30px;
+			height: 90px;
+		}
+		.icon img{
+			width: 30px;
+			height: 30px;
+		}
+		.icon.dif{
+			border: 1px solid red;
+		}
+	</style>
+
+<script type="text/javascript">
+    var k=0;  //当前的索引
+var ss = new Array(); //数组，用来存放图片
+ss[0] = "../images/passage2.png";
+ss[1] = "../images/passage3.png";
+ss[2] = "../images/passage1.png";
+ss[3] = "../images/passage2.png";
+function scrollPic(){ 
+  if(k>ss.length-1){ //如果当前函数超过数组下标的最大值，k=0
+    k=0;
+  }
+  for(var i=0;i<ss.length;i++){ //遍历数组
+    if(i==k){ //如果当前索引等于当前数组下标
+              document.getElementById("img").src=ss[i]; //改变图片路径
+      }
+    }
+    k++; //k++,执行下一次操作
+  }
+ 
+setInterval("scrollPic()",1500); //设置定时器
+  </script>
+
+</head>
+<body>
+<div id ="Maxbox">
+	<div id ="Topbox">
+		<div id ="Topbegin">切换城市：</div>
+		<div class="Topthings">
+			北京
+		</div>
+		<div class="Topthings">
+			上海
+		</div>
+		<div class="Topthings">
+			福州
+		</div>
+		<div class="Topthings">
+			广州
+		</div>
+		<div class="Topthings">
+			青岛
+		</div>
+		<div class ="Topend1">
+			<img src="../images/task_03.png">加盟一百度
+	    </div>
+	    <div class ="Topend2">
+			<img src="../images/task_06.png">店铺管理
+	    </div>
+	    <div id ="introducebox">
+	    	<div class="introducethings"><img src="../images/task_14.png"></div>
+	    	<div class="introducethings"><img src="../images/task_16.png"></div>
+	    	<div class="introducethings"><img src="../images/task_18.png"></div>
+	    	<div class="introducethings"><img src="../images/task_20.png"></div>
+	    	<div class="introducethings"><img src="../images/task_22.png"></div>
+	    	<div class="introducethings"><img src="../images/task_11.png"></div>
+	    	<div class="introducethings"><img src="../images/task_25.png"></div>
+	    	<div class="introducethings"><img src="../images/task_27.png"></div>
+	    	<div class="introducethings"><img src="../images/task_29.png"></div>
+	    	<div class="introducethings"><img src="../images/task_32.png"></div>
+	    	<div class="introducethings"><img src="../images/task_34.png"></div>
+        </div>
+        <div id = "searchbigbox">
+        	
+
+        <div class="searchbox">
+	<ul class="border1">
+		<li><a href="#" class="style1">搜店</a></li>
+		<li><a href="#">地址</a></li>
+		<li><a href="#">优惠券</a></li>
+		<li><a href="#">全文</a></li>
+		<li><a href="#">视频</a></li>
+	</ul>
+	<div class="bodys"> 
+		<p><input type="text" value="" id="" class="one" placeholder="例如：荷棠鱼坊烤鱼 或 日本樱花料理" /><button class="one1">搜索</button></p>
+		<p><input type="text" value="" id="" class="two" placeholder="例如：荷棠鱼坊烤鱼 或 日本樱花料理" /><button class="two2">搜索</button></p>
+		<p><input type="text" value="" id="" class="three" placeholder="例如：荷棠鱼坊烤鱼 或 日本樱花料理" /><button class="three3">搜索</button></p>
+		<p><input type="text" value="" id="" class="four" placeholder="例如：荷棠鱼坊烤鱼 或 日本樱花料理" /><button class="three3">搜索</button></p>
+		<p><input type="text" value="" id="" class="five" placeholder="例如：荷棠鱼坊烤鱼 或 日本樱花料理" /><button class="three3">搜索</button></p>
+	</div>
+	
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+</div>	<!-- searchbigbox -->
+</div>  <!-- searchbox -->
+<div id="searchboxbackground">
+	<div id="imgpositon"><img src="../images/task_48.png"><img src="../images/passage1.png" id="img"> </div>
+</div>  <!-- searchboxbackground -->
+<div id ="searchboxwords"><p>金钱豹，大江南，湘水之珠，德禹楼，荷棠鱼坊烤鱼，SOHO尚都，湘味楼.....</p></div>
+<div id ="searchboxtip"><img src="../images/task_x.png"></div>
+<div id ="videodog"><img src="../images/task_55.png">
+	<div id="videodogpic"><img src="../images/task_79.png"> </div>
+	<div id="videodogword">
+		<li>现场实录：杭州机场国航系统崩溃</li>
+		<li>网友自拍国航晚点后遭遇</li>
+		<li>【拍客】绝对奢侈的航班 注意第41秒</li>
+	</div>
+</div><!-- dog -->
+<div id="crabshow">
+	<p id ="crabshowword1">HOT SHOP</p>
+	<p id="crabshowword2">红店铺</p>
+	<div class="carbshowpic" >
+		<div id="carbshowli1">
+			<img src="../images/task_63.png">
+		</div>
+		<div id ="carbshowpichot"><img src="../images/task_58.png"></div>
+		    	<div id="carbshowpicword">
+			   <p class="carbshowfont">御舟和涵珍园国际酒店</p>
+			   <li class="carbshowfont1">区域：朝阳/CBD</li>
+			   <li class="carbshowfont1">人均：180元</li>
+			   <li class="carbshowfont1">人气：12321</li>
+		    </div>
+
+	</div>
+<div class="carbshowpic" >
+		<div id="carbshowli2">
+			<img src="../images/task_63.png">
+		</div>
+		<div id ="carbshowpichot2"><img src="../images/task_58.png"></div>
+		    	<div id="carbshowpicword2">
+			   <p class="carbshowfont"id="carbdown">御舟和涵珍园国际酒店</p>
+			   <li class="carbshowfont1">区域：朝阳/CBD</li>
+			   <li class="carbshowfont1">人均：180元</li>
+			   <li class="carbshowfont1">人气：12321</li>
+		    </div>
+<div id="carbshowpic3" >
+      <div id="carbshowli3">
+			<img src="../images/task_63.png">
+		</div>
+<div id ="carbshowpichot3"><img src="../images/task_58.png"></div>
+            <div id="carbshowpicword3">
+			   <p class="carbshowfont"id="carbdown3">御舟和涵珍园国际酒店</p>
+			   <li class="carbshowfont1">区域：朝阳/CBD</li>
+			   <li class="carbshowfont1">人均：180元</li>
+			   <li class="carbshowfont1">人气：12321</li>
+		    </div>
+</div>		    	
+</div><!-- carbbox -->
+<div id="registerbox">
+	<div id ="registerboxtop">
+		<p id="registerboxtopword1">LOAD</p>
+		<p id="registerboxtopword2">登陆</p>
+	</div>
+	<div>
+		<p id="registerboxinputword1">用 户 名：</p><input id="registerboxinput">
+	</div>
+	<div>
+		<p id="registerboxinputword2">密  码 ：</p><input id="registerboxinput1">
+	</div>
+	<div id ="registerboxpic"><img src="../images/task_60.png"> &nbsp记住我
+	</div> 
+	<div id ="registerboxpic1"><img src="../images/task_66.png"></div>
+	<div id="registerboxtiao"><img src="../images/task_tiao.png">
+		
+	</div>
+    <div id="registerboxword1">●新用户注册</div> 
+    <div id="registerboxword2">●忘记密码了</div> 
+</div> <!-- registerbox -->
+<div id="awardbox">
+	<img src="../images/task_72.png">
+</div> <!-- awardbox -->
+<div id="computerbox">
+	<img src="../images/task_76.png">
+</div><!-- computerbox -->
+<div id="tiaobox"><img src="../images/task_86.png"></div>
+<div id="activitybox">
+	<div id="activityboxtop">
+		<img  id ="avtivitytiao"src="../images/task_90.png">
+		<p id="activityboxtopword1">&nbsp&nbsp每日活动</p>
+		<p id="activityboxtopword2">2014.2</p>
+		<img src="../images/task_tiao.png">
+	</div>
+	<div id="activityboxcenter">
+		<img id ="boot"src="../images/task_101.png">
+		<div id ="date"><img src="../images/task_103.png">本日主题XXXXXX<p id="dateword">迟到的荣誉——维米尔的写实主义风俗画迟到的荣誉维米尔画迟到的荣誉维米尔维米尔维米尔</p></div>
+	</div>
+	<div id="calender">
+		<div id="calenderdate">MON TUE WED THU FRI SAT SUN </div>
+		<div class="calenderbox1">29</div>
+		<div class="calenderbox1">30</div>
+		<div class="calenderbox">1</div>
+		<div class="calenderbox">2</div>
+		<div class="calenderbox">3</div>
+		<div class="calenderbox">4</div>
+		<div class="calenderbox">5</div>
+		<div class="calenderbox">6</div>
+		<div class="calenderbox">7</div>
+		<div class="calenderbox">8</div>
+		<div class="calenderbox">9</div>
+		<div class="calenderbox">10</div>
+		<div class="calenderbox">11</div>
+		<div class="calenderbox">12</div>
+		<div class="calenderbox">13</div>
+		<div class="calenderbox">14</div>
+		<div class="calenderbox">15</div>
+		<div class="calenderbox">16</div>
+		<div class="calenderbox">17</div>
+		<div class="calenderbox">18</div>
+		<div class="calenderbox">19</div>
+		<div class="calenderbox">20</div>
+		<div class="calenderbox">21</div>
+		<div class="calenderbox"><img onmouseover="display1()" onmouseout="disappear1()"src="../images/task_bbq.jpg"></div>
+		<div id="box1" onmouseover="display1()" onmouseout="disappear1()">
+               <img  id ="pizapic"src="../images/task_bbqbig.jpg">
+               <p id="bbqword1">TUE</p>
+               <p id="bbqword2">本日主题</p>
+               <p id="bbqword3">香酥烧烤</p>
+            </div>
+		<div class="calenderbox">23</div>
+		<div class="calenderbox">24</div>
+		<div class="calenderbox">25</div>
+		<div class="calenderbox">26</div>
+		<div class="calenderbox">27</div>
+		<div class="calenderbox">28</div>
+		<div class="calenderbox">29</div>
+		<div class="calenderbox">30</div>
+		<div class="calenderbox">
+			<img onmouseover="display()" onmouseout="disappear()"src="../images/task_piza.jpg">
+            <div id="box" onmouseover="display()" onmouseout="disappear()">
+               <img  id ="pizapic"src="../images/task_pizabig.jpg">
+               <p id="pizaword1">MON</p>
+               <p id="pizaword2">本日主题</p>
+               <p id="pizaword3">这是美味披萨</p>
+            </div>
+        </div>
+		<div class="calenderbox">1</div>
+		<div class="calenderbox">2</div>
+		<div class="calenderbox">3</div>
+		<div class="calenderbox">4</div>
+		<div class="calenderbox">5</div>
+		<div class="calenderbox">6</div>
+		<div class="calenderbox1">7</div>
+		<div class="calenderbox1">8</div>
+		<div class="calenderbox1">9</div>
+		<div class="calenderbox1">10</div>
+		<div class="calenderbox1">11</div>
+		<div class="calenderbox1">12</div>
+		<div class="calenderbox1">13</div>
+		<div class="calenderbox1">14</div>
+		<div class="calenderbox1">15</div>
+		<div class="calenderbox1">16</div>
+	</div>
+</div><!-- activitybox -->
+<div id="recommendbox">
+	<div id="recommendboxtop">
+		<img src="../images/task_92.png">
+		<img src="../images/task_93.png">
+		<div id="recommendboxtopword">BEST</div>
+	</div>
+	<div id="recommendboxmiddle">
+		<div id="wrap">
+		<div class="img">
+			<ul class="img">
+				<li class="item active"><img src="../images/task_98.png"></li>
+				<li class="item"><img src="../images/task_200.jpeg"></li>
+			    <li class="item"><img src="../images/task_201.jpg"></li>
+		</div>
+		<div class="btn">
+			<ul>
+				<li class="icon dif" index="0"><img src="../images/task_98.png"></li>
+				<li class="icon" index="1"><img src="../images/task_200.jpeg"></li>
+				<li class="icon" index="2"><img src="../images/task_201.jpg"></li>
+			</ul>
+		</div>
+	
+	</div>
+	<script type="text/javascript">
+		var wrap = document.getElementById("wrap");
+		var imgs = document.getElementsByClassName("item");
+		var btns = document.getElementsByClassName("icon");
+		var index = 0;
+		for(var i = 0;i < btns.length ; i++){
+			btns[i].onclick = function(){
+				var myIndex = this.getAttribute('index');
+				for(var j = 0; j < btns.length ; j++){
+					imgs[j].className = "item";
+					btns[j].className = "icon";
+				}
+				imgs[myIndex].className = "item active";
+				btns[myIndex].className = "icon dif";
+			}
+		}
+		var timer = setInterval(auto,2000);
+		function auto(){
+			index ++;
+			if(index > btns.length){
+				index = 0;
+			}
+			for(var k = 0; k < btns.length ; k++){
+					imgs[k].className = "item";
+			}
+			imgs[index].className = "item active";
+		}
+		wrap.onmouseover = function(){
+			clearInterval(timer);
+		}
+		wrap.onmouseout = function(){
+			setInterval(auto,2000);
+		}
+	</script>
+	</div>
+	<div id="recommendboxbottom">
+		<div class="recommendboxbottomword"><img src="../images/task_shop.png"><span>老店换新颜，丰泽园野田重新亮相...  &nbsp&nbsp </span> <span class="recommendboxbottomdate">08/07/22</span></div>
+		<div class="recommendboxbottomword"><img src="../images/task_infor.png"><span>生活中使用的商品哪些有缺陷野田&nbsp&nbsp&nbsp&nbsp&nbsp </span> <span class="recommendboxbottomdate">08/07/22</span></div>
+		<div class="recommendboxbottomword"><img src="../images/task_shop.png"><span>老店换新颜，丰泽园野田重新亮相...  &nbsp&nbsp </span> <span class="recommendboxbottomdate">08/07/22</span></div>
+		<div class="recommendboxbottomword"><img src="../images/task_infor.png"><span>生活中使用的商品哪些有缺陷野田&nbsp&nbsp&nbsp&nbsp&nbsp </span> <span class="recommendboxbottomdate">08/07/22</span></div>
+		<div class="recommendboxbottomword"><img src="../images/task_shop.png"><span>老店换新颜，丰泽园野田重新亮相...  &nbsp&nbsp </span> <span class="recommendboxbottomdate">08/07/22</span></div>
+		<div class="recommendboxbottomword"><img src="../images/task_shop.png"><span>性感红唇妆，模特明星野田都爱它 &nbsp&nbsp&nbsp&nbsp  </span> <span class="recommendboxbottomdate">08/07/22</span></div>
+		<div class="recommendboxbottomword"><img src="../images/task_shop.png"><span>野田建业天，日本全能时尚设计美女  &nbsp </span> <span class="recommendboxbottomdate">08/07/22</span></div>
+	</div>
+</div><!-- recommendbox -->
+<div id="couponsbox">
+	<div id="couponsboxtop">
+	<p id ="couponsword1">COUPONS</p>
+	<p id="couponsword2">抢卷儿</p>
+	<img id ="couponspic"src="../images/task_82.png">
+	</div>
+	<div id="couponsmidde">
+		<div id="popular"><span id="popularword">人气</span></div>
+		<div id="tuijian"><span class ="word">推荐</span></div>
+		<div id="ruijia"><span class="word">最新</span></div>
+	</div>
+	<div id="couponsbottom">
+		<div class="couponsbottomtop">
+			<span id="store">商店名</span><span id="provence">省</span><span id="inputword">打印</span>
+		</div>
+		
+	</div>
+        <li><span class="beijing">老北京一尊黄牛</span>
+			<span class="red">12%</span>
+			<span class="grey">345</span>
+		</li>
+		<li><span class="beijing1">老北京一尊黄牛</span>
+			<span class="red1">12%</span>
+			<span class="grey1">345</span>
+		</li>
+		<li><span class="beijing2">老北京一尊黄牛</span>
+			<span class="red2">12%</span>
+			<span class="grey2">345</span>
+		</li>
+		<li><span class="beijing3">老北京一尊黄牛</span>
+			<span class="red3">12%</span>
+			<span class="grey3">345</span>
+		</li>
+		<li><span class="beijing4">老北京一尊黄牛</span>
+			<span class="red4">12%</span>
+			<span class="grey4">345</span>
+		</li>
+		<li><span class="beijing5">老北京一尊黄牛</span>
+			<span class="red5">12%</span>
+			<span class="grey5">345</span>
+		</li>
+</div><!-- conpusbox -->
+<div id="shopbox">
+	<div id="shopboxtop">
+	<p id ="shopword1">SHOP</p>
+	<p id="shopword2">今日推荐</p>
+	<img id ="shoppic"src="../images/task_82.png">
+	</div>
+	<div class="shopshowpic" >
+		<div id="shopshowli1">
+			<img src="../images/task_108.png">
+		</div>
+		    <div id="shopshowpicword">
+			   <p class="shopshowfont">汉莱国际美食百汇展览</p>
+			   <li class="shopshowfont1">口味：创意中餐</li>
+			   <li class="shopshowfont1">区域：朝阳/CBD</li>
+		    </div>
+	
+		<div id="shopshowli2">
+			<img src="../images/task_108.png">
+		</div>
+		    	
+		    <div id="shopshowpicword2">
+			    <p class="shopshowfont">汉莱国际美食百汇展览</p>
+			   <li class="shopshowfont1">口味：创意中餐</li>
+			   <li class="shopshowfont1">区域：朝阳/CBD</li>
+		    </div>
+		    <div id="shopshowli3">
+			<img src="../images/task_108.png">
+		</div>
+		    	
+		    <div id="shopshowpicword3">
+			   <p class="shopshowfont">汉莱国际美食百汇展览</p>
+			   <li class="shopshowfont1">口味：创意中餐</li>
+			   <li class="shopshowfont1">区域：朝阳/CBD</li>
+		    </div>
+		    <div id="shopshowli4">
+			<img src="../images/task_108.png">
+		</div>
+		    	
+		    <div id="shopshowpicword4">
+			   <p class="shopshowfont">汉莱国际美食百汇展览</p>
+			   <li class="shopshowfont1">口味：创意中餐</li>
+			   <li class="shopshowfont1">区域：朝阳/CBD</li>
+		    </div>
+	</div>
+</div><!-- shopbox -->
+<div id="subwaybox">
+		<img src="../images/task_112.png">
+</div><!-- subwaybox -->
+<div id="bbsbox">
+	<div id="bbsboxtop">
+	<p id ="bbsword1">BBS</p>
+	<p id="bbsword2">论坛</p>
+	<img id ="shoppic"src="../images/task_82.png">
+	</div>
+	<div id="bbswords">
+          <div id="bbsbox0"onmouseover="display2()" onmouseout="disappear2()" >
+            <span class="bbsnumber">01</span>
+            <span class="bbssentence">保证你没见过的古堡餐厅</span>
+            <span class="bbsplace">世说新语</span>
+          </div>
+        <div id="bbsbox1" onmouseover="display2()" onmouseout="disappear2()">
+        	<img id="beauty" src="../images/task_beauty.jpg">
+        	<span class="beautyword" >画皮之———日剧中的手机</span>
+            <span class="beautysay">阿瑞斯 </span>
+            <span class="beautynumber">ONE</span>
+        </div> 
+         <div id="bbsbox01"onmouseover="display3()" onmouseout="disappear3()" >
+            <span class="bbsnumber2">02</span>
+            <span class="bbssentence2">保证你没见过的古堡餐厅</span>
+            <span class="bbsplace2">世说新语</span>
+          </div>
+        <div id="bbsbox2" onmouseover="display3()" onmouseout="disappear3()">
+        	<img id="beauty2" src="../images/task_beauty.jpg">
+        	<span class="beautyword2" >画皮之———日剧中的手机</span>
+            <span class="beautysay2">阿瑞斯 </span>
+            <span class="beautynumber2">TWO</span>
+        </div> 
+            <div id="bbsbox02"onmouseover="display4()" onmouseout="disappear4()" >
+            <span class="bbsnumber3">03</span>
+            <span class="bbssentence3">保证你没见过的古堡餐厅</span>
+            <span class="bbsplace3">世说新语</span>
+          </div>
+        <div id="bbsbox3" onmouseover="display4()" onmouseout="disappear4()">
+        	<img id="beauty3" src="../images/task_beauty.jpg">
+        	<span class="beautyword3" >画皮之———日剧中的手机</span>
+            <span class="beautysay3">阿瑞斯 </span>
+            <span class="beautynumber3">THREE</span>
+        </div> 
+            <div id="bbsbox03"onmouseover="display5()" onmouseout="disappear5()" >
+            <span class="bbsnumber4">04</span>
+            <span class="bbssentence4">保证你没见过的古堡餐厅</span>
+            <span class="bbsplace4">世说新语</span>
+          </div>
+        <div id="bbsbox4" onmouseover="display5()" onmouseout="disappear5()">
+        	<img id="beauty4" src="../images/task_beauty.jpg">
+        	<span class="beautyword4" >画皮之———日剧中的手机</span>
+            <span class="beautysay4">阿瑞斯 </span>
+            <span class="beautynumber4">FOUR</span>
+        </div> 
+         <div id="bbsbox04"onmouseover="display6()" onmouseout="disappear6()" >
+            <span class="bbsnumber5">05</span>
+            <span class="bbssentence5">保证你没见过的古堡餐厅</span>
+            <span class="bbsplace5">世说新语</span>
+          </div>
+        <div id="bbsbox5" onmouseover="display6()" onmouseout="disappear6()">
+        	<img id="beauty5" src="../images/task_beauty.jpg">
+        	<span class="beautyword5" >画皮之———日剧中的手机</span>
+            <span class="beautysay5">阿瑞斯 </span>
+            <span class="beautynumber5">FIVE</span>
+        </div> 
+         <div id="bbsbox05"onmouseover="display7()" onmouseout="disappear7()" >
+            <span class="bbsnumber6">06</span>
+            <span class="bbssentence6">保证你没见过的古堡餐厅</span>
+            <span class="bbsplace6">世说新语</span>
+          </div>
+        <div id="bbsbox6" onmouseover="display7()" onmouseout="disappear7()">
+        	<img id="beauty6" src="../images/task_beauty.jpg">
+        	<span class="beautyword6" >画皮之———日剧中的手机</span>
+            <span class="beautysay6">阿瑞斯 </span>
+            <span class="beautynumber6">SIX</span>
+        </div> 
+             <div id="bbsbox06"onmouseover="display8()" onmouseout="disappear8()" >
+            
+
+           <span class="bbsnumber7">07</span>
+            <span class="bbssentence7">保证你没见过的古堡餐厅</span>
+            <span class="bbsplace7">世说新语</span>
+
+          </div>
+        <div id="bbsbox7" onmouseover="display8()" onmouseout="disappear8()">
+         <img id="beauty7" src="../images/task_beauty.jpg">
+        	<span class="beautyword7" >画皮之———日剧中的手机</span>
+            <span class="beautysay7">阿瑞斯 </span>
+            <span class="beautynumber7">SEVEN</span>
+        	        </div> 
+          
+
+
+     
+    </div>
+</div><!-- bbsbox -->
+<div id="shop360">
+	<div id="shop360boxtop">
+	<p id ="shop360word1">360°SHOP</p>
+	<p id="shop360word2">全景逛店</p>
+	<img id ="shoppic"src="../images/task_82.png">
+	</div>
+	<div id="shoppic1"><img src="../images/task_113.png"></div>
+	<div id="shopword5">苹果雪梨排骨汤</div>
+</div><!-- 360shop -->
+<div id="tiaobox2"><img src="../images/task_86.png"></div>
+<div id="shopdiscountbox">
+	<div id="shopdiscountboxtop">
+	<p id ="shopdiscountword1">SHOP</p>
+	<p id="shopdiscountword2">折扣店</p>
+	<img id ="shopdiscountpic"src="../images/task_82.png">
+	</div>
+	<div id="shopdiscountboxmiddle"> 
+		<div id="shopdiscountshowli1">
+			<img src="../images/task_108.png">
+		</div>
+		<div id="shopdiscountshowpicword">
+			   <p class="shopdiscountshowfont">汉莱国际美食百汇展览</p>
+			   <li class="shopdiscountshowfont1">口味：创意中餐</li>
+			   <li class="shopdiscountshowfont1">区域：朝阳/CBD</li>
+		</div>
+	</div>
+	<div id="gap"></div>
+	<div id ="shopdiscountboxword">
+		<li><img  class ="pointtiao"src="../images/point.png">
+		<div class="shopdiscountboxmargin">
+			<img class="redponit"src="../images/task_red.png">
+			<span class="middletokenfather">[<span class="middletoken">休闲</span>]</span>
+			<span class="shopdiscountboxword">瀚茶缘（雍和宫店）</span>
+		</div></li>
+		<li><img  class ="pointtiao1"src="../images/point.png">
+		<div class="shopdiscountboxmargin1">
+			<img class="redponit"src="../images/task_red.png">
+			<span class="middletokenfather">[<span class="middletoken">休闲</span>]</span>
+			<span class="shopdiscountboxword">瀚茶缘（雍和宫店）</span>
+		</div></li>
+		<li><img  class ="pointtiao2"src="../images/point.png">
+		<div class="shopdiscountboxmargin2">
+			<img class="redponit"src="../images/task_red.png">
+			<span class="middletokenfather">[<span class="middletoken">美食</span>]</span>
+			<span class="shopdiscountboxword">老北京一尊皇牛</span>
+		</div></li>
+		<li><img  class ="pointtiao3"src="../images/point.png">
+		<div class="shopdiscountboxmargin3">
+			<img class="redponit"src="../images/task_red.png">
+			<span class="middletokenfather">[<span class="middletoken">购物</span>]</span>
+			<span class="shopdiscountboxword">老北京一尊皇牛</span>
+		</div></li>
+		<li><img  class ="pointtiao4"src="../images/point.png">
+		<div class="shopdiscountboxmargin4">
+			<img class="redponit"src="../images/task_red.png">
+			<span class="middletokenfather">[<span class="middletoken">美食</span>]</span>
+			<span class="shopdiscountboxword">瀚茶缘（雍和宫店）</span>
+		</div></li>
+		<li><img  class ="pointtiao5"src="../images/point.png">
+		<div class="shopdiscountboxmargin5">
+			<img class="redponit"src="../images/task_red.png">
+			<span class="middletokenfather">[<span class="middletoken">美食</span>]</span>
+			<span class="shopdiscountboxword">老北京一尊皇牛</span>
+		</div></li>
+	</div>
+</div><!-- shopdiscountbox -->
+<div id="advicebox">
+	<div id="adviceboxtop">
+	<p id ="advicetopword1">LIFESTYLE &nbspADVICE</p>
+	<p id ="advicetopword2">知道分子</p>
+	<img id ="advicetoppic"src="../images/task_82.png">
+	</div>
+		<div id="adviceboxmidde">
+		<div id="popular1"><span id="popularword1">有人在问</span></div>
+		<div id="tuijian1"><span class ="word1">有人知道</span></div>
+		<div id="ruijia1"><span class="word1">热门问题</span></div>
+	</div>
+	<div id="adviceboxtip">
+		<span class="adviceboxtips">标题</span>
+		<span class="adviceboxtips">状态</span>
+	</div>
+	<div id="gap1"></div>
+	<div id ="adviceboxword">
+		<li><img  class ="pointtiao"src="../images/point.png">
+		<div class="advicemargin">
+			<img class="redponit"src="../images/task_red.png">
+			<span class="middletokenfather">[<span class="middletoken">美食</span>]</span>
+			<span class="adviceboxword">推荐几款性价比较好的冰箱</span>
+			<span class="adviceboxwordpic1">&nbsp &nbsp &nbsp &nbsp<img src="../images/task_131.png"></span>
+		</div></li>
+	    <li><img  class ="pointtiao"src="../images/point.png">
+		<div class="advicemargin">
+			<img class="redponit"src="../images/task_red.png">
+			<span class="middletokenfather">[<span class="middletoken">购物</span>]</span>
+			<span class="adviceboxword">生活中哪些商品的包装有缺陷</span>
+			<span class="adviceboxwordpic1">&nbsp &nbsp <img src="../images/task_143.png"></span>
+		</div></li>
+		<li><img  class ="pointtiao"src="../images/point.png">
+		<div class="advicemargin">
+			<img class="redponit"src="../images/task_red.png">
+			<span class="middletokenfather">[<span class="middletoken">休闲</span>]</span>
+			<span class="adviceboxword">为什么我第一次进入保姆和宠物</span>
+			<span class="adviceboxwordpic1"><img src="../images/task_131.png"></span>
+		</div></li>
+		<li><img  class ="pointtiao"src="../images/point.png">
+		<div class="advicemargin">
+			<img class="redponit"src="../images/task_red.png">
+			<span class="middletokenfather">[<span class="middletoken">美食</span>]</span>
+			<span class="adviceboxword">推荐几款性价比较好的冰箱</span>
+			<span class="adviceboxwordpic1">&nbsp &nbsp &nbsp &nbsp<img src="../images/task_143.png"></span>
+		</div></li>
+		<li><img  class ="pointtiao"src="../images/point.png">
+		<div class="advicemargin">
+			<img class="redponit"src="../images/task_red.png">
+			<span class="middletokenfather">[<span class="middletoken">购物</span>]</span>
+			<span class="adviceboxword">生活中哪些商品的包装有缺陷</span>
+			<span class="adviceboxwordpic1">&nbsp &nbsp <img src="../images/task_143.png"></span>
+		</div></li>
+	</div>
+	<div id="adviceboxbottom">
+		<div id="adviceboxbottominput">
+		<span id="adviceinputword1">搜搜谁知道：</span><input id="adviceboxinput">
+		<img  id ="go"src="../images/task_162.png">
+	    </div>
+	</div>
+</div><!-- advicebox -->
+<div id="saobox">
+	<div id="saoboxtop">
+	<p id ="saotopword1">HOT</p>
+	<p id ="saotopword2">红人骚客</p>
+	<img id ="saotoppic"src="../images/task_82.png">
+	</div>
+<div id="linetop3">
+  <div class="img_div">
+     <img src="../images/task_128.png">
+     <a href="#">
+         <div class="mask">
+             <h3>用户2</h3><h3>人气2</h3>
+         </div>
+     </a>
+    </div>
+</div>
+<div id="linetop2">
+  <div class="img_div2">
+     <img src="../images/task_126.png">
+     <a href="#"> 
+         <div class="mask2">
+              <h3>用户1</h3><h3>人气1</h3>
+         </div>
+     </a>
+    </div>
+</div>
+<div id="linetop1">
+  
+     <img src="../images/task_124.png">
+  
+</div>
+<div id="linemiddle1">
+  <div class="img_div3">
+     <img src="../images/task_137.png">
+     <a href="#">
+         <div class="mask3">
+              <h3>用户3</h3><h3>人气3</h3>
+         </div>
+     </a>
+    </div>
+</div>
+<div id="linemiddle2">
+  <div class="img_div4">
+     <img src="../images/task_138.png">
+     <a href="#">
+         <div class="mask4">
+              <h3>用户4</h3><h3>人气4</h3>
+         </div>
+     </a>
+    </div>
+</div>
+<div id="linemiddle3">
+  <div class="img_div5">
+     <img src="../images/task_139.png">
+     <a href="#">
+         <div class="mask5">
+             <h3>用户5</h3><h3>人气5</h3>
+         </div>
+     </a>
+    </div>
+</div>
+<div id="linemiddle4">
+  <div class="img_div6">
+     <img src="../images/task_141.png">
+     <a href="#">
+         <div class="mask6">
+              <h3>用户6</h3><h3>人气6</h3>
+         </div>
+     </a>
+    </div>
+</div>
+<div id="linebottom1">
+  <div class="img_div7">
+     <img src="../images/task_150.png">
+     <a href="#">
+         <div class="mask7">
+             <h3>用户8</h3><h3>人气8</h3>
+         </div>
+     </a>
+    </div>
+</div>
+<div id="linebottom2">
+  <div class="img_div8">
+     <img src="../images/task_151.png">
+     <a href="#">
+         <div class="mask8">
+              <h3>用户15</h3><h3>人气15</h3>
+         </div>
+     </a>
+    </div>
+</div>
+<div id="linebottom3">
+  <div class="img_div9">
+     <img src="../images/task_152.png">
+     <a href="#">
+         <div class="mask9">
+              <h3>用户10</h3><h3>人气10</h3>
+         </div>
+     </a>
+    </div>
+</div>
+<div id="linebottom4">
+  <div class="img_div10">
+     <img src="../images/task_154.png">
+     <a href="#">
+         <div class="mask10">
+              <h3>用户12</h3><h3>人气12</h3>
+         </div>
+     </a>
+    </div>
+</div>
+
+
+</div><!-- saobox -->
+<div id="helpbox">
+	<div id="helpboxtop">
+	<p id ="helptopword1">HELP</p>
+	<p id ="helptopword2">在线帮助</p>
+	<img id ="helptoppic"src="../images/task_82.png">
+	</div>
+	<div id="helptiao"><img src="../images/task_tiao.png"></div>
+	<div id="helpword">
+		<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 您有任何问题，都可以通过全国免费电话，或MSN在线客服联系我们！</p>
+		<img id ="call"src="../images/task_172.png"><span id="callword">4006-100-516</span>
+		<img id = "person"src="../images/task_174.png"><span id="personword">100du@live.cn</span>
+		<div id="personhelp">
+			<p id="personbold">用户帮助</p>
+			<li><img src="../images/task_red.png">金币是什么</li>
+			<li><img src="../images/task_red.png">怎样查看我的等级</li>
+			<li><img src="../images/task_red.png">怎么赚积分</li>
+		</div>
+		<div id="sellpersonhelp">
+			<p id="sellpersonbold">商户帮助</p>
+			<li><img src="../images/task_red.png">如何成为明星商户</li>
+			<li><img src="../images/task_red.png">邮件推广</li>
+			<li><img src="../images/task_red.png">论坛推广方法</li>
+		</div>
+	</div>
+</div><!-- helpbox -->
+<div id="voicebox">
+	<div id="helpboxtop">
+	<p id ="helptopword1">100DU IN THE MEDIA</p>
+	<p id ="helptopword2">媒体声音</p>
+	<img id ="helptoppic"src="../images/task_82.png">
+	</div>
+	<div id="voiceshowbox">
+	<div class="voiceboxword"><img src="../images/task_181.png"></div><span class ="voiceword">日本4大的财经杂志《钻石周刊》对100度乐享网的报道</span>
+	<div class="voiceboxword1"><img src="../images/task_194.png"></div><span class ="voiceword1">视频网站100度享乐网获得网络视听许可证</span>
+	<div class="voiceboxword2"><img src="../images/task_198.png"></div><span class ="voiceword2">日本最大的财经杂志《钻石周刊》对100度乐享网的报道</span>
+	<div class="voiceboxword3"><img src="../images/task_202.png"></div><span class ="voiceword3">享乐主义的机会</span>
+    </div>
+</div><!-- voicebox -->
+<div id="bottombox">
+	<div id="bottomboxback">
+		<p id="us">关于我们 &nbsp &nbsp| &nbsp &nbsp联系我们 &nbsp &nbsp|  &nbsp &nbsp版权声明&nbsp &nbsp | &nbsp &nbsp加入我们 &nbsp &nbsp |&nbsp &nbsp问题反馈 &nbsp &nbsp| &nbsp &nbsp友情链接&nbsp &nbsp| &nbsp &nbsp视频索引</p>
+		<p id="web"> Copright  $  2008 www.100du.com  &nbsp100度享乐网 &nbsp版权所有 &nbsp京ICP证070374号</p>
+	</div>&nbsp
+</div><!-- bottombox -->
+</div>  <!-- Maxbox -->
+</body>
+</html>
